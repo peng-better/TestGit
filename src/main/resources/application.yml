@@ -1,0 +1,21 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    druid:
+      username: root
+      password: lanxin
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/shiro?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    type: com.alibaba.druid.pool.DruidDataSource
+  #redis连接池
+  redis:
+    host: 127.0.0.1
+    password: lanxin
+    port: 6379
+    timeout: 1800
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.lanxin.ov
+  config-location: classpath:configuration.xml
